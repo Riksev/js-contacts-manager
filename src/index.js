@@ -19,11 +19,12 @@ import Contact, {
 import EditContact, { action as editAction } from "./routes/edit";
 import { action as destroyAction } from "./routes/destroy";
 import Index from "./routes/index";
+import { path as sitePath } from "./routes/path";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route
-      path="/"
+      path={`${sitePath}/`}
       element={<Root />}
       loader={rootLoader}
       action={rootAction}
